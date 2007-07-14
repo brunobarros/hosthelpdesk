@@ -1,0 +1,30 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="struts-default.xml"/>
+
+    <package name="default" extends="struts-default">
+    
+	    <action name="main">
+			<interceptor-ref name="defaultStack" />
+            <result>main.jsp</result>
+        </action>
+        
+        <action name="entrar" class="usuarioAction" method="login">
+            <result name="success">principal.jsp</result>
+        	<result name="input">login.jsp</result>
+        	<result name="error">login.jsp</result>
+        </action>
+        
+        <action name="chamado!*" class="chamadoAction" method="{1}">
+        	<result name="novo">inserir.jsp</result>
+        	<result name="success">sucesso.jsp</result>
+        	<result name="input">inserir.jsp</result>
+        	<result name="error">inserir.jsp</result>
+        </action>
+        
+
+    </package>
+</struts>
