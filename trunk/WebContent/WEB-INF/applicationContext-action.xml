@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-autowire="autodetect">
+
+	<!--  actions -->
+    <bean id="usuarioAction" class="br.com.hosthelpdesk.action.UsuarioAction" scope="prototype" />	
+    <bean id="chamadoAction" class="br.com.hosthelpdesk.action.ChamadoAction" scope="prototype" />	
+        
+</beans>
